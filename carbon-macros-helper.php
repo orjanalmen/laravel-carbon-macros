@@ -24,6 +24,12 @@ namespace Illuminate\Support {
      * @method bool isPresidentsDay
      * @method bool isColumbusDay
      * @method bool isNewYearsEve
+     * @method bool isTiradentesDay
+     * @method bool isBrazilianLaborDay
+     * @method bool isBrazilianIndependenceDay
+     * @method bool isTheDayOfOurLadyAparecida
+     * @method bool isBrazilianDayOfTheDead
+     * @method bool isBrazilianRepublicProclamationDay
      */
     class Carbon extends \Carbon\Carbon {}
 }

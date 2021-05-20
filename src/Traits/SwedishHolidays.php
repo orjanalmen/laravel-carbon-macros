@@ -19,6 +19,12 @@ trait SwedishHolidays
             // Swedes celebrate Christmas Eve, Christmas Day is just another holiday.
             return $this->month === 12 && $this->day === 24;
         });
+        
+        Carbon::macro('isAscensionDay', function () {
+            // Ascension Thursday, Kristi himmelfärds dag
+            $ascension = Carbon::createMidnightDate($this->year, 3, 21)->addDays(easter_days($this->year));
+            return $this->month === $asension->month && $this->day === $ascension->day;
+        });
 
         Carbon::macro('isSwedishNationalDay', function () {
             // Previously knows as Swedish Flag Day before 1983.
